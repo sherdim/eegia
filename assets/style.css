@@ -1,0 +1,300 @@
+/* assets/style.css */
+
+/* Общие настройки */
+body {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    background-color: #F1F3F5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Заголовок */
+.app-header {
+    background-color: #F8F9FA;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0;
+}
+
+.app-header h1 {
+    text-align: center;
+    color: #2D3748;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.app-header p {
+    text-align: center;
+    color: #718096;
+    margin-top: 0;
+}
+
+/* Карточки */
+.card {
+    background-color: #FAFBFD;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+/* Заголовки секций */
+.section-title {
+    margin-bottom: 15px;
+    color: #2D3748;
+}
+
+/* Загрузка файла */
+.upload-area {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #CBD5E0;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #F8FAFC;
+    cursor: pointer;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+/* === Блок "Данные": две колонки === */
+.data-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.data-col {
+    width: calc(50% - 10px);
+}
+
+.upload-area:hover {
+    border-color: #A0AEC0;
+}
+
+/* Настройки отображения */
+.settings-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между колонками */
+    justify-content: center;
+}
+
+.settings-col {
+    width: 70%; /* По умолчанию — одна колонка */
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.settings-col-left {
+    width: 25% !important;
+}
+.settings-col-right {
+    margin-left: 0;
+}
+
+/* Слайдеры */
+.slider-label {
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Скрыть серую полосу у слайдера "Начало окна" */
+/* .custom-slider .rc-slider-mark {
+    display: none !important;
+} */
+
+/* Стиль для слайдера — ограничить ширину */
+.rc-slider {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* График */
+.graph-container .dash-graph {
+    height: 600px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Таблица аннотаций */
+.annotations-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.annotations-table th,
+.annotations-table td {
+    padding: 8px;
+    border: 1px solid #E2E8F0;
+    word-break: break-word; /* Перенос длинных слов */
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Обратная связь */
+.feedback {
+    text-align: center;
+    min-height: 24px;
+    margin-top: 10px;
+}
+
+/* Скрыть элемент */
+.hidden {
+    display: none;
+}
+
+/* === Кнопки навигации === */
+.seek-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* заменяет margin-right, лучше для симметрии */
+    flex-wrap: wrap; /* на случай узких экранов */
+    margin: 12px 0;
+}
+
+.seek-btn {
+    padding: 8px 16px;
+    background-color: #6B8CAE;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+     min-width: 250px;
+}
+
+.seek-btn:hover {
+    background-color: #4A6FA5;
+}
+
+/* === Инпуты в таблице аннотаций === */
+.edit-input {
+    width: 100px;
+    padding: 4px;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.edit-label-input {
+    width: 120px;
+    padding: 4px;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+}
+
+/* === Кнопка удаления в таблице === */
+.delete-btn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: #e55a5a;
+}
+
+/* === Контейнер кнопок сохранения === */
+.save-buttons {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #4A6FA5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn:hover {
+    background-color: #3a5a80;
+}
+
+/* === Блок ввода аннотации === */
+.annotation-input-area {
+    text-align: center;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #F0F4F8;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.annotation-input-area.hidden {
+    display: none;
+}
+
+/* Форма аннотации: инпут + кнопка */
+.annotation-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+/* Поле ввода метки */
+.label-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #CBD5E0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* Кнопка "Добавить метку" — используем общий стиль .btn */
+.btn-add {
+    padding: 8px 16px;
+    background-color: #4A6FA5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: auto;
+    width: 300px;
+}
+
+.btn-add:hover {
+    background-color: #3a5a80;
+}

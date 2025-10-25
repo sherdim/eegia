@@ -1,5 +1,7 @@
 /venv
 /__pycache__
 **/__pycache__/
-/storage/raw_data/
-/storage/raw.db
+/saved_annotations
+/autosave
+/utils
+/cache

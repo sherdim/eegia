@@ -1,21 +1,10 @@
-# gui
-streamlit==1.48.1
-
-# math
+dash==3.2.0
+dash[diskcache]
+diskcache==5.6.3
 pandas==2.3.2
 numpy==2.2.6
 mne==1.10.1
-
-# models
-# transformers==4.55.4
-# tensorflow==2.20.0
-# --extra-index-url https://download.pytorch.org/whl/cu126    # Установка с VPN
-# torch==2.6.0
-# torchvision==0.21.0
-# torchaudio==2.6.0
-
-#other
-psutil==7.0.0
+scikit-learn==1.7.2
 sktime==0.38.5
-numba==0.61.2
-PyYAML==6.0.2
+sktime[all_extras]
+plotly==6.3.0
